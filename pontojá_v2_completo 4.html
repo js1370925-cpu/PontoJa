@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PontoJá — Comece por aqui</title>
+<meta name="description" content="Encontre lugares, serviços, produtos e eventos perto de você.">
+<style>
+:root{--blue:#062b5c;--blue2:#0b4b94;--yellow:#ffb300;--bg:#f5f7fb;--text:#12243d;--muted:#68788e;--line:#e4eaf2;--white:#fff;--shadow:0 10px 30px #0a2c5312}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:var(--bg)}
+button,input,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+header{height:70px;background:var(--blue);color:#fff;display:flex;align-items:center;padding:0 5%;gap:28px;position:sticky;top:0;z-index:30}.logo{font-weight:900;font-size:26px;letter-spacing:-1.5px;line-height:.9}.logo span{color:var(--yellow)}.logo small{display:block;font-size:9px;letter-spacing:.2px;margin-top:5px;opacity:.8}
+nav{display:flex;gap:22px;flex:1}nav a{font-size:13px;font-weight:800;padding:25px 0;border-bottom:3px solid transparent}nav a:hover{color:var(--yellow);border-bottom-color:var(--yellow)}
+#where{font-size:13px;font-weight:800;white-space:nowrap}
+.hero{padding:62px 5% 82px;color:#fff;background:linear-gradient(90deg,#062044eF,#0b4b94b8),linear-gradient(135deg,#234f7b,#a7c5d7 60%,#f2c56b)}.hero-inner{max-width:1050px;margin:auto}.eyebrow{color:#ffd166;font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1.5px}h1{font-size:clamp(38px,5vw,62px);line-height:1.02;letter-spacing:-2.5px;margin:10px 0 16px}h1 span{color:var(--yellow)}.hero p{font-size:18px;max-width:680px;line-height:1.5;margin-bottom:28px}
+.search{display:flex;background:#fff;padding:8px;border-radius:18px;max-width:920px;box-shadow:0 18px 50px #0004}.search input{border:0;outline:0;padding:15px;flex:1;min-width:0}.search select{border:0;border-left:1px solid var(--line);padding:0 14px;color:var(--text);background:#fff}.search button{border:0;border-radius:12px;background:var(--yellow);padding:0 28px;font-weight:900}.hint{font-size:12px;margin-top:11px;color:#dce8f7}
+main{max-width:1180px;margin:auto;padding:0 5% 70px}.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:-30px;position:relative}.cat{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px 8px;text-align:center;box-shadow:var(--shadow);font-weight:900;font-size:13px;transition:.2s}.cat:hover{transform:translateY(-4px)}.cat .ico{font-size:27px;margin-bottom:9px}.section{margin-top:45px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:17px}.head h2{margin:0;font-size:24px}.head p{margin:5px 0 0;color:var(--muted);font-size:13px}.link{color:#0b5cc7;font-size:13px;font-weight:900;background:none;border:0}
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 7px 25px #0a2c5309;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.pic{height:135px;background:linear-gradient(135deg,#dbe8f5,#aebfd0);display:grid;place-items:center;font-size:48px}.body{padding:14px}.tag{display:inline-block;padding:4px 7px;background:#fff1c7;color:#9a6400;border-radius:99px;font-size:10px;font-weight:900}.body h3{margin:8px 0 5px;font-size:16px}.meta{font-size:12px;color:var(--muted);margin:5px 0}.rating{color:#dc9200;font-weight:900}.heart{float:right;border:0;background:none;font-size:20px;color:#718096}.empty{grid-column:1/-1;background:#fff;border:1px dashed #cdd7e4;border-radius:18px;padding:35px;text-align:center;color:var(--muted)}
+.near{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.near button{border:1px solid var(--line);background:#fff;border-radius:15px;padding:12px;text-align:left}.near .nimg{height:75px;border-radius:10px;background:#e8eef5;display:grid;place-items:center;font-size:30px}.near strong{display:block;margin-top:9px;font-size:12px}.near small{color:#0b5cc7;font-weight:800}
+.cta{margin-top:48px;padding:28px;border-radius:20px;background:linear-gradient(100deg,var(--blue),var(--blue2));color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{margin:0 0 5px}.cta p{margin:0;color:#d8e6f7}.cta button{background:var(--yellow);border:0;padding:13px 20px;border-radius:11px;font-weight:900}
+footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-content:space-between;gap:20px;font-size:12px}
+.overlay{display:none;position:fixed;inset:0;background:#001a3388;z-index:100;padding:20px;align-items:center;justify-content:center}.modal{background:#fff;border-radius:20px;width:min(600px,100%);max-height:90vh;overflow:auto;padding:24px;position:relative}.close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:25px}.modal h2{margin-top:0}.form{display:grid;gap:12px}.form input,.form select{padding:12px;border:1px solid #ccd6e3;border-radius:10px;outline:0}.form button{padding:13px;border:0;border-radius:10px;background:var(--blue);color:#fff;font-weight:900}.toast{position:fixed;right:18px;bottom:18px;background:#102f58;color:#fff;padding:13px 17px;border-radius:12px;display:none;z-index:200;box-shadow:var(--shadow)}
+@media(max-width:900px){nav{display:none}.cats{grid-template-columns:repeat(3,1fr)}.results{grid-template-columns:repeat(2,1fr)}.near{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){header{padding:0 17px}.logo{font-size:22px}#where{margin-left:auto;font-size:11px}.hero{padding:48px 17px 65px}main{padding-left:17px;padding-right:17px}.search{flex-wrap:wrap}.search input{flex-basis:100%}.search select{flex:1;height:48px;border-left:0;background:#f5f7fa;border-radius:10px}.search button{height:48px;flex:1}.cats{grid-template-columns:repeat(2,1fr);margin-top:-20px}.results{grid-template-columns:1fr}.near{grid-template-columns:repeat(2,1fr)}.cta{flex-direction:column;align-items:flex-start}footer{flex-direction:column}}
+</style>
+<style>
+/* PontoJá v2 — recursos adicionais */
+.account{display:flex;gap:8px;align-items:center}
+.account button,.nav-btn{border:1px solid #ffffff33;background:#ffffff12;color:#fff;border-radius:10px;padding:8px 12px;font-weight:800;font-size:12px}
+.detail{display:none;position:fixed;inset:0;background:#001a3388;z-index:110;padding:18px;align-items:center;justify-content:center}
+.detail-box{background:#fff;border-radius:20px;width:min(760px,100%);max-height:90vh;overflow:auto;position:relative}
+.detail-cover{height:190px;background:linear-gradient(135deg,#0b4b94,#8bb7ce);display:grid;place-items:center;font-size:80px}
+.detail-content{padding:24px}.detail-content h2{margin:0 0 6px}.close-detail{position:absolute;right:15px;top:12px;border:0;background:#fff;border-radius:50%;width:36px;height:36px;font-size:23px;z-index:2}
+.detail-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
+.info-box{border:1px solid #e4eaf2;border-radius:14px;padding:15px}.info-box h4{margin:0 0 8px}
+.photo-row{display:flex;gap:9px}.photo{width:82px;height:65px;border-radius:10px;background:#e9eef5;display:grid;place-items:center;font-size:25px}
+.review{border-top:1px solid #e4eaf2;padding:12px 0}.stars{color:#dc9200;font-weight:900}
+#mapBox{height:170px;border-radius:12px;background:linear-gradient(135deg,#dce9d5,#c3d9ed);position:relative;overflow:hidden}
+#mapBox:before,#mapBox:after{content:"";position:absolute;background:#fff8;width:140%;height:10px;transform:rotate(25deg);top:55%;left:-20%}
+#mapBox:after{transform:rotate(-15deg);top:30%}
+.pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);font-size:35px;z-index:2}
+.review-form{display:grid;gap:9px;margin-top:10px}.review-form textarea,.review-form select{padding:10px;border:1px solid #ccd6e3;border-radius:9px}.review-form button{border:0;background:#062b5c;color:#fff;border-radius:9px;padding:10px;font-weight:800}
+.login-tabs{display:flex;gap:7px;margin-bottom:12px}.login-tabs button{flex:1;border:1px solid #dce3ed;background:#f7f9fc;border-radius:9px;padding:10px;font-weight:800}.login-tabs button.active{background:#062b5c;color:#fff}
+.business-panel{display:none;position:fixed;inset:0;background:#001a3388;z-index:115;padding:18px;align-items:center;justify-content:center}.panel-box{background:#fff;border-radius:20px;width:min(850px,100%);max-height:90vh;overflow:auto;padding:25px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{padding:17px;border:1px solid #e4eaf2;border-radius:14px}.stat b{display:block;font-size:25px;color:#0b4b94}.switch{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid #e4eaf2}
+@media(max-width:650px){.detail-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.account .nav-btn{display:none}}
+</style>
+
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">📍 Ponto<span>Já</span><small>Comece por aqui.</small></a>
+  <nav><a href="#top">Início</a><a href="#resultados">Lugares</a><a href="#categorias">Serviços</a><a href="#resultados">Produtos</a><a href="#resultados">Eventos</a><a href="#resultados">Notícias</a></nav>
+  <div id="where">📍 Sua região</div><div class="account"><button class="nav-btn" id="loginBtn">Entrar</button><button class="nav-btn" id="ownerBtn">Área do negócio</button></div>
+</header>
+
+<section class="hero" id="top">
+<div class="hero-inner">
+<div class="eyebrow">Seu novo ponto de partida</div>
+<h1>Tudo o que você precisa,<br><span>em um só lugar.</span></h1>
+<p>Pesquise lugares, serviços, produtos e eventos. O PontoJá organiza tudo para você encontrar mais rápido.</p>
+<form class="search" id="searchForm">
+<input id="q" placeholder="O que você está procurando?" aria-label="Busca">
+<select id="category" aria-label="Categoria">
+<option value="">Todas</option><option value="Lugar">Lugares</option><option value="Serviço">Serviços</option><option value="Produto">Produtos</option><option value="Evento">Eventos</option>
+</select>
+<button>Buscar</button>
+</form>
+<div class="hint">Ex.: restaurante · eletricista · academia · evento · celular</div>
+</div>
+</section>
+
+<main>
+<section class="cats" id="categorias">
+<a class="cat" href="#resultados" data-cat="Lugar"><div class="ico">📍</div>Lugares</a>
+<a class="cat" href="#resultados" data-cat="Serviço"><div class="ico">🛠️</div>Serviços</a>
+<a class="cat" href="#resultados" data-cat="Produto"><div class="ico">🛍️</div>Produtos</a>
+<a class="cat" href="#resultados" data-cat="Evento"><div class="ico">📅</div>Eventos</a>
+<a class="cat" href="#resultados" data-cat=""><div class="ico">📰</div>Notícias</a>
+<a class="cat" href="#resultados" data-cat="Profissional"><div class="ico">👥</div>Profissionais</a>
+</section>
+
+<section class="section" id="resultados">
+<div class="head"><div><h2 id="resultTitle">🔥 Em destaque</h2><p id="resultInfo">Resultados de exemplo — pesquise para encontrar o que procura.</p></div><button class="link" id="clearBtn">Limpar busca</button></div>
+<div class="results" id="cards"></div>
+</section>
+
+<section class="section">
+<div class="head"><div><h2>📍 Explore por categoria</h2><p>Atalhos para começar uma busca.</p></div></div>
+<div class="near">
+<button data-search="Restaurantes"><div class="nimg">🍕</div><strong>Restaurantes</strong><small>Buscar →</small></button>
+<button data-search="Mecânicos"><div class="nimg">🚗</div><strong>Mecânicos</strong><small>Buscar →</small></button>
+<button data-search="Farmácias"><div class="nimg">💊</div><strong>Farmácias</strong><small>Buscar →</small></button>
+<button data-search="Padarias"><div class="nimg">🥐</div><strong>Padarias</strong><small>Buscar →</small></button>
+<button data-search="Beleza"><div class="nimg">💇</div><strong>Beleza</strong><small>Buscar →</small></button>
+<button data-search="Pet Shop"><div class="nimg">🐶</div><strong>Pet Shop</strong><small>Buscar →</small></button>
+</div>
+</section>
+
+<section class="cta">
+<div><h2>🚀 Tem um negócio?</h2><p>Cadastre sua empresa no PontoJá e seja encontrado.</p></div>
+<button id="openAdd">Cadastrar meu negócio</button>
+</section>
+</main>
+
+<footer><div><strong>📍 Ponto<span style="color:#ffb300">Já</span></strong><br>Comece por aqui.</div><div>Sobre · Anuncie · Privacidade · Fale conosco</div><div>© 2026 PontoJá</div></footer>
+
+<div class="overlay" id="overlay">
+<div class="modal">
+<button class="close" id="closeModal">×</button>
+<h2>Cadastrar negócio</h2>
+<p style="color:#68788e">O cadastro fica salvo neste navegador nesta primeira versão.</p>
+<form class="form" id="addForm">
+<input id="businessName" required placeholder="Nome do negócio">
+<select id="businessType" required><option value="">Escolha a categoria</option><option>Lugar</option><option>Serviço</option><option>Produto</option><option>Evento</option><option>Profissional</option></select>
+<input id="businessDesc" required placeholder="Descrição (ex.: pizzaria, eletricista...)">
+<input id="businessCity" placeholder="Cidade">
+<button>Adicionar ao PontoJá</button>
+</form>
+</div></div>
+
+<div class="detail" id="detail">
+  <div class="detail-box">
+    <button class="close-detail" id="closeDetail">×</button>
+    <div class="detail-cover" id="detailCover">🏪</div>
+    <div class="detail-content">
+      <span class="tag" id="detailType">Lugar</span>
+      <h2 id="detailName">Negócio</h2>
+      <div class="meta" id="detailDesc"></div>
+      <div class="detail-grid">
+        <div>
+          <div class="info-box"><h4>📸 Fotos</h4><div class="photo-row"><div class="photo">🏪</div><div class="photo">📷</div><div class="photo">✨</div></div></div>
+          <div class="info-box" style="margin-top:12px"><h4>⭐ Avaliações</h4><div id="reviews"></div>
+            <form class="review-form" id="reviewForm">
+              <select id="reviewStars"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select>
+              <textarea id="reviewText" required placeholder="Conte sua experiência..."></textarea>
+              <button>Publicar avaliação</button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <div class="info-box"><h4>📍 Localização</h4><div id="mapBox"><span class="pin">📍</span></div><p class="meta" id="detailCity"></p></div>
+          <div class="info-box" style="margin-top:12px"><h4>ℹ️ Informações</h4><p class="meta">Horário: 08:00–22:00</p><p class="meta">Telefone: (00) 00000-0000</p><button class="review-form" style="width:100%" onclick="toast('Em breve: rota e contato online!')">Como chegar</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="loginOverlay">
+  <div class="modal">
+    <button class="close" id="closeLogin">×</button>
+    <h2 id="loginTitle">Entrar no PontoJá</h2>
+    <div class="login-tabs"><button class="active" id="tabLogin">Entrar</button><button id="tabRegister">Criar conta</button></div>
+    <form class="form" id="loginForm">
+      <input id="loginName" required placeholder="Seu nome">
+      <input id="loginEmail" required type="email" placeholder="Seu e-mail">
+      <input id="loginPass" required type="password" minlength="4" placeholder="Senha">
+      <button>Continuar</button>
+    </form>
+  </div>
+</div>
+
+<div class="business-panel" id="ownerPanel">
+  <div class="panel-box">
+    <button class="close" id="closeOwner">×</button>
+    <h2>📊 Área do negócio</h2>
+    <p style="color:#68788e">Demonstração do painel que os proprietários usarão para acompanhar o negócio.</p>
+    <div class="stats">
+      <div class="stat"><span>Visualizações</span><b>1.284</b><small>+18% este mês</small></div>
+      <div class="stat"><span>Cliques</span><b>347</b><small>+11% este mês</small></div>
+      <div class="stat"><span>Avaliação</span><b>4,8 ★</b><small>1.204 avaliações</small></div>
+    </div>
+    <h3>Configurações</h3>
+    <div class="switch"><span>Receber mensagens</span><input type="checkbox" checked></div>
+    <div class="switch"><span>Mostrar telefone</span><input type="checkbox" checked></div>
+    <div class="switch"><span>Participar de ofertas</span><input type="checkbox"></div>
+    <button style="margin-top:18px;border:0;background:#ffb300;padding:12px 18px;border-radius:10px;font-weight:900" onclick="toast('Alterações salvas!')">Salvar alterações</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const base=[
+ {id:1,n:"Burger House",type:"Lugar",desc:"Restaurante e hambúrguer",city:"Sua região",icon:"🍔",rating:"4,8",dist:"1,4 km"},
+ {id:2,n:"Fit Life Academia",type:"Serviço",desc:"Academia e treinamento",city:"Sua região",icon:"🏋️",rating:"4,7",dist:"2,1 km"},
+ {id:3,n:"Show da Banda Aurora",type:"Evento",desc:"Música ao vivo e entretenimento",city:"Sua região",icon:"🎤",rating:"4,9",dist:"3,5 km"},
+ {id:4,n:"Tech Cell",type:"Produto",desc:"Loja de celulares e eletrônicos",city:"Sua região",icon:"📱",rating:"4,6",dist:"1,8 km"},
+ {id:5,n:"Elétrica Silva",type:"Serviço",desc:"Eletricista residencial",city:"Sua região",icon:"⚡",rating:"4,9",dist:"2,8 km"},
+ {id:6,n:"Pizzaria Central",type:"Lugar",desc:"Pizza, massas e delivery",city:"Sua região",icon:"🍕",rating:"4,7",dist:"900 m"},
+ {id:7,n:"Pet Shop Amigo",type:"Produto",desc:"Produtos e cuidados para pets",city:"Sua região",icon:"🐶",rating:"4,8",dist:"2,6 km"},
+ {id:8,n:"Festival de Rua",type:"Evento",desc:"Comida, música e artesanato",city:"Sua região",icon:"🎪",rating:"4,5",dist:"4,1 km"}
+];
+let custom=JSON.parse(localStorage.getItem("pontojá_custom")||"[]");
+let favorites=JSON.parse(localStorage.getItem("pontojá_favs")||"[]");
+let all=()=>[...custom,...base];
+const cards=document.getElementById("cards"),q=document.getElementById("q"),cat=document.getElementById("category");
+
+function render(items=all(), searching=false){
+ cards.innerHTML="";
+ if(!items.length){cards.innerHTML='<div class="empty"><div style="font-size:40px">🔎</div><h3>Nada encontrado</h3><p>Tente outro termo ou categoria.</p></div>';return}
+ items.forEach(x=>{
+  const fav=favorites.includes(x.id);
+  const el=document.createElement("article");el.className="card";
+  el.innerHTML=`<div class="pic">${x.icon}</div><div class="body"><span class="tag">${x.type}</span><button class="heart" aria-label="Favoritar" data-fav="${x.id}">${fav?"♥":"♡"}</button><h3>${x.n}</h3><div class="meta">${x.desc}</div><div class="meta">${x.rating?`<span class="rating">★ ${x.rating}</span> · `:""}${x.city}</div><div class="meta">📍 ${x.dist||"—"}</div></div>`;
+  cards.appendChild(el);
+ });
+ document.querySelectorAll("[data-fav]").forEach(b=>b.onclick=()=>{
+  const id=Number(b.dataset.fav);favorites=favorites.includes(id)?favorites.filter(v=>v!==id):[...favorites,id];
+  localStorage.setItem("pontojá_favs",JSON.stringify(favorites));render(currentItems(),searching);
+ });
+}
+function currentItems(){
+ const term=q.value.trim().toLowerCase(), c=cat.value;
+ return all().filter(x=>(!term || [x.n,x.desc,x.type,x.city].join(" ").toLowerCase().includes(term))&&(!c||x.type===c));
+}
+function search(){
+ const items=currentItems();render(items,true);
+ document.getElementById("resultTitle").textContent=q.value||cat.value?"🔎 Resultados":"🔥 Em destaque";
+ document.getElementById("resultInfo").textContent=`${items.length} resultado${items.length===1?"":"s"} encontrado${items.length===1?"":"s"}.`;
+ document.getElementById("resultados").scrollIntoView({behavior:"smooth",block:"start"});
+}
+document.getElementById("searchForm").onsubmit=e=>{e.preventDefault();search()};
+document.getElementById("clearBtn").onclick=()=>{q.value="";cat.value="";render();document.getElementById("resultTitle").textContent="🔥 Em destaque";document.getElementById("resultInfo").textContent="Resultados de exemplo — pesquise para encontrar o que procura."};
+document.querySelectorAll(".cat").forEach(a=>a.onclick=()=>{cat.value=a.dataset.cat;q.value="";setTimeout(search,0)});
+document.querySelectorAll("[data-search]").forEach(b=>b.onclick=()=>{q.value=b.dataset.search;cat.value="";search()});
+
+const overlay=document.getElementById("overlay");
+document.getElementById("openAdd").onclick=()=>overlay.style.display="flex";
+document.getElementById("closeModal").onclick=()=>overlay.style.display="none";
+overlay.onclick=e=>{if(e.target===overlay)overlay.style.display="none"};
+
+document.getElementById("addForm").onsubmit=e=>{
+ e.preventDefault();
+ const item={id:Date.now(),n:document.getElementById("businessName").value,type:document.getElementById("businessType").value,desc:document.getElementById("businessDesc").value,city:document.getElementById("businessCity").value||"Sua região",icon:"🏪",rating:"Novo",dist:"—"};
+ custom.unshift(item);localStorage.setItem("pontojá_custom",JSON.stringify(custom));
+ overlay.style.display="none";e.target.reset();q.value=item.n;cat.value="";search();toast("Negócio cadastrado com sucesso!");
+};
+
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>t.style.display="none",2600)}
+
+if(navigator.geolocation){
+ navigator.geolocation.getCurrentPosition(()=>document.getElementById("where").textContent="📍 Localização ativada",()=>{},{timeout:3000});
+}
+render();
+
+/* Recursos adicionais: detalhes, avaliações, login e painel */
+let loggedUser=JSON.parse(localStorage.getItem("pontojá_user")||"null");
+let reviews=JSON.parse(localStorage.getItem("pontojá_reviews")||"{}");
+const detail=document.getElementById("detail");
+const loginOverlay=document.getElementById("loginOverlay");
+const ownerPanel=document.getElementById("ownerPanel");
+let selectedId=null;
+
+function openDetail(item){
+ selectedId=item.id;
+ document.getElementById("detailCover").textContent=item.icon||"🏪";
+ document.getElementById("detailType").textContent=item.type;
+ document.getElementById("detailName").textContent=item.n;
+ document.getElementById("detailDesc").textContent=item.desc;
+ document.getElementById("detailCity").textContent=`${item.city||"Sua região"} · ${item.dist||"—"}`;
+ renderReviews(item.id);
+ detail.style.display="flex";
+}
+function renderReviews(id){
+ const list=reviews[id]||[];
+ const box=document.getElementById("reviews");
+ if(!list.length){box.innerHTML='<p class="meta">Ainda não há avaliações. Seja o primeiro!</p>';return}
+ box.innerHTML=list.map(r=>`<div class="review"><b>${r.name}</b> <span class="stars">${"★".repeat(r.stars)}${"☆".repeat(5-r.stars)}</span><div class="meta">${r.text}</div></div>`).join("");
+}
+document.getElementById("closeDetail").onclick=()=>detail.style.display="none";
+detail.onclick=e=>{if(e.target===detail)detail.style.display="none"};
+document.getElementById("reviewForm").onsubmit=e=>{
+ e.preventDefault();
+ if(!loggedUser){detail.style.display="none";loginOverlay.style.display="flex";toast("Entre para publicar uma avaliação.");return}
+ const id=selectedId;
+ reviews[id]=reviews[id]||[];
+ reviews[id].push({name:loggedUser.name,stars:Number(document.getElementById("reviewStars").value),text:document.getElementById("reviewText").value});
+ localStorage.setItem("pontojá_reviews",JSON.stringify(reviews));
+ document.getElementById("reviewText").value="";
+ renderReviews(id);toast("Avaliação publicada!");
+};
+
+const originalRender=render;
+render=function(items=all(),searching=false){
+ originalRender(items,searching);
+ document.querySelectorAll(".card").forEach((el,i)=>{
+   const item=items[i];
+   if(item) el.onclick=(ev)=>{
+     if(ev.target.closest("[data-fav]")) return;
+     openDetail(item);
+   };
+ });
+};
+
+document.getElementById("loginBtn").onclick=()=>{
+ loginOverlay.style.display="flex";
+ document.getElementById("loginName").value=loggedUser?.name||"";
+ document.getElementById("loginEmail").value=loggedUser?.email||"";
+};
+document.getElementById("closeLogin").onclick=()=>loginOverlay.style.display="none";
+loginOverlay.onclick=e=>{if(e.target===loginOverlay)loginOverlay.style.display="none"};
+document.getElementById("loginForm").onsubmit=e=>{
+ e.preventDefault();
+ loggedUser={name:document.getElementById("loginName").value,email:document.getElementById("loginEmail").value};
+ localStorage.setItem("pontojá_user",JSON.stringify(loggedUser));
+ loginOverlay.style.display="none";
+ document.getElementById("loginBtn").textContent=`Olá, ${loggedUser.name.split(" ")[0]}`;
+ toast("Conta conectada!");
+};
+document.getElementById("tabLogin").onclick=()=>{
+ document.getElementById("tabLogin").classList.add("active");document.getElementById("tabRegister").classList.remove("active");document.getElementById("loginTitle").textContent="Entrar no PontoJá";
+};
+document.getElementById("tabRegister").onclick=()=>{
+ document.getElementById("tabRegister").classList.add("active");document.getElementById("tabLogin").classList.remove("active");document.getElementById("loginTitle").textContent="Criar conta no PontoJá";
+};
+document.getElementById("ownerBtn").onclick=()=>ownerPanel.style.display="flex";
+document.getElementById("closeOwner").onclick=()=>ownerPanel.style.display="none";
+ownerPanel.onclick=e=>{if(e.target===ownerPanel)ownerPanel.style.display="none"};
+if(loggedUser)document.getElementById("loginBtn").textContent=`Olá, ${loggedUser.name.split(" ")[0]}`;
+
+/* Re-render once so the card detail handlers are active. */
+render();
+
+</script>
+<script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+  const SUPABASE_URL = 'https://senxebdofpczulxsmile.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_Mt-D_dK5INZ0pemDkqezTQ__vo_Ugqr';
+
+  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+  window.supabaseClient = supabase;
+
+  async function testarConexao() {
+    const { data, error } = await supabase
+      .from('anuncios')
+      .select('*')
+      .limit(10);
+
+    if (error) {
+      console.error('Erro:', error);
+      return;
+    }
+    alert('Supabase conectado!');
+
+    console.log('PontoJá conectado ao Supabase:', data);
+  }
+
+  testarConexao();
+  
+</script>
+</body>
+</html>
