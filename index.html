@@ -339,7 +339,7 @@ render();
       .limit(10);
 
     if (error) {
-      console.error('Erro:', error);
+      alert('ERRO: ' + error.message);
       return;
     }
     alert('Supabase conectado!');
