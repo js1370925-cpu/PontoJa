@@ -15,13 +15,44 @@ nav{display:flex;gap:22px;flex:1}nav a{font-size:13px;font-weight:800;padding:25
 .hero{padding:62px 5% 82px;color:#fff;background:linear-gradient(90deg,#062044eF,#0b4b94b8),linear-gradient(135deg,#234f7b,#a7c5d7 60%,#f2c56b)}.hero-inner{max-width:1050px;margin:auto}.eyebrow{color:#ffd166;font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1.5px}h1{font-size:clamp(38px,5vw,62px);line-height:1.02;letter-spacing:-2.5px;margin:10px 0 16px}h1 span{color:var(--yellow)}.hero p{font-size:18px;max-width:680px;line-height:1.5;margin-bottom:28px}
 .search{display:flex;background:#fff;padding:8px;border-radius:18px;max-width:920px;box-shadow:0 18px 50px #0004}.search input{border:0;outline:0;padding:15px;flex:1;min-width:0}.search select{border:0;border-left:1px solid var(--line);padding:0 14px;color:var(--text);background:#fff}.search button{border:0;border-radius:12px;background:var(--yellow);padding:0 28px;font-weight:900}.hint{font-size:12px;margin-top:11px;color:#dce8f7}
 main{max-width:1180px;margin:auto;padding:0 5% 70px}.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:-30px;position:relative}.cat{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px 8px;text-align:center;box-shadow:var(--shadow);font-weight:900;font-size:13px;transition:.2s}.cat:hover{transform:translateY(-4px)}.cat .ico{font-size:27px;margin-bottom:9px}.section{margin-top:45px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:17px}.head h2{margin:0;font-size:24px}.head p{margin:5px 0 0;color:var(--muted);font-size:13px}.link{color:#0b5cc7;font-size:13px;font-weight:900;background:none;border:0}
-.results{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 7px 25px #0a2c5309;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.pic{height:135px;background:linear-gradient(135deg,#dbe8f5,#aebfd0);display:grid;place-items:center;font-size:48px}.body{padding:14px}.tag{display:inline-block;padding:4px 7px;background:#fff1c7;color:#9a6400;border-radius:99px;font-size:10px;font-weight:900}.body h3{margin:8px 0 5px;font-size:16px}.meta{font-size:12px;color:var(--muted);margin:5px 0}.rating{color:#dc9200;font-weight:900}.heart{float:right;border:0;background:none;font-size:20px;color:#718096}.empty{grid-column:1/-1;background:#fff;border:1px dashed #cdd7e4;border-radius:18px;padding:35px;text-align:center;color:var(--muted)}
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 7px 25px #0a2c5309;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.pic{height:135px;background:linear-gradient(135deg,#dbe8f5,#aebfd0);display:grid;place-items:center;font-size:48px;overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover}.body{padding:14px}.tag{display:inline-block;padding:4px 7px;background:#fff1c7;color:#9a6400;border-radius:99px;font-size:10px;font-weight:900}.body h3{margin:8px 0 5px;font-size:16px}.meta{font-size:12px;color:var(--muted);margin:5px 0}.rating{color:#dc9200;font-weight:900}.heart{float:right;border:0;background:none;font-size:20px;color:#718096}.empty{grid-column:1/-1;background:#fff;border:1px dashed #cdd7e4;border-radius:18px;padding:35px;text-align:center;color:var(--muted)}
 .near{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.near button{border:1px solid var(--line);background:#fff;border-radius:15px;padding:12px;text-align:left}.near .nimg{height:75px;border-radius:10px;background:#e8eef5;display:grid;place-items:center;font-size:30px}.near strong{display:block;margin-top:9px;font-size:12px}.near small{color:#0b5cc7;font-weight:800}
 .cta{margin-top:48px;padding:28px;border-radius:20px;background:linear-gradient(100deg,var(--blue),var(--blue2));color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{margin:0 0 5px}.cta p{margin:0;color:#d8e6f7}.cta button{background:var(--yellow);border:0;padding:13px 20px;border-radius:11px;font-weight:900}
 footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-content:space-between;gap:20px;font-size:12px}
-.overlay{display:none;position:fixed;inset:0;background:#001a3388;z-index:100;padding:20px;align-items:center;justify-content:center}.modal{background:#fff;border-radius:20px;width:min(600px,100%);max-height:90vh;overflow:auto;padding:24px;position:relative}.close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:25px}.modal h2{margin-top:0}.form{display:grid;gap:12px}.form input,.form select{padding:12px;border:1px solid #ccd6e3;border-radius:10px;outline:0}.form button{padding:13px;border:0;border-radius:10px;background:var(--blue);color:#fff;font-weight:900}.toast{position:fixed;right:18px;bottom:18px;background:#102f58;color:#fff;padding:13px 17px;border-radius:12px;display:none;z-index:200;box-shadow:var(--shadow)}
+.overlay{display:none;position:fixed;inset:0;background:#001a3388;z-index:100;padding:20px;align-items:center;justify-content:center}.modal{background:#fff;border-radius:20px;width:min(600px,100%);max-height:90vh;overflow:auto;padding:24px;position:relative}.close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:25px}.modal h2{margin-top:0}.form{display:grid;gap:12px}.form input,.form select{padding:12px;border:1px solid #ccd6e3;border-radius:10px;outline:0}.photo-input{padding:12px;border:1px dashed #9fb0c5;border-radius:10px;background:#f8fbff}.photo-preview{display:flex;gap:8px;overflow:auto}.photo-preview img{width:74px;height:64px;object-fit:cover;border-radius:9px;border:1px solid #dbe3ee}.form button{padding:13px;border:0;border-radius:10px;background:var(--blue);color:#fff;font-weight:900}.toast{position:fixed;right:18px;bottom:18px;background:#102f58;color:#fff;padding:13px 17px;border-radius:12px;display:none;z-index:200;box-shadow:var(--shadow)}
 @media(max-width:900px){nav{display:none}.cats{grid-template-columns:repeat(3,1fr)}.results{grid-template-columns:repeat(2,1fr)}.near{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){header{padding:0 17px}.logo{font-size:22px}#where{margin-left:auto;font-size:11px}.hero{padding:48px 17px 65px}main{padding-left:17px;padding-right:17px}.search{flex-wrap:wrap}.search input{flex-basis:100%}.search select{flex:1;height:48px;border-left:0;background:#f5f7fa;border-radius:10px}.search button{height:48px;flex:1}.cats{grid-template-columns:repeat(2,1fr);margin-top:-20px}.results{grid-template-columns:1fr}.near{grid-template-columns:repeat(2,1fr)}.cta{flex-direction:column;align-items:flex-start}footer{flex-direction:column}}
+
+/* Menu lateral móvel PontoJá */
+.menu-btn{display:none;border:1px solid #ffffff33;background:#ffffff12;color:#fff;border-radius:10px;width:44px;height:44px;font-size:24px;align-items:center;justify-content:center}
+.drawer-backdrop{position:fixed;inset:0;background:#001a3377;z-index:190;opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s}
+.drawer{position:fixed;left:0;top:0;bottom:0;width:min(84vw,330px);background:#fff;z-index:200;transform:translateX(-102%);transition:transform .25s ease;box-shadow:10px 0 35px #001a3330;overflow:auto;touch-action:pan-y}
+.drawer.open{transform:translateX(0)}
+.drawer-backdrop.open{opacity:1;visibility:visible}
+.drawer-head{background:#062b5c;color:#fff;padding:24px 18px 20px;display:flex;justify-content:space-between;align-items:center}
+.drawer-head .logo{font-size:23px}
+.drawer-close{border:0;background:#ffffff18;color:#fff;width:42px;height:42px;border-radius:12px;font-size:25px}
+.drawer-user{padding:15px 18px;border-bottom:1px solid #e4eaf2;color:#68788e;font-size:13px}
+.drawer-nav{padding:10px}
+.drawer-nav button,.drawer-nav a{width:100%;min-height:48px;border:0;background:#fff;border-radius:12px;padding:12px 13px;display:flex;align-items:center;gap:12px;text-align:left;color:#12243d;font-weight:800;font-size:14px}
+.drawer-nav button:active,.drawer-nav a:active{background:#f1f5fa}
+.drawer-sep{height:1px;background:#e4eaf2;margin:8px 12px}
+.drawer-foot{padding:12px 18px 24px;color:#68788e;font-size:11px}
+@media(max-width:900px){.menu-btn{display:flex}header>.logo{flex:1}#where{display:none}}
+
+
+/* PontoJá — pacote de lançamento */
+.form textarea{padding:12px;border:1px solid #ccd6e3;border-radius:10px;outline:0;min-height:90px;resize:vertical;font:inherit}
+.contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.contact-actions a,.contact-actions button,.claim-btn,.report-btn,.share-btn{border:0;border-radius:10px;padding:10px 12px;font-weight:800;font-size:12px}
+.contact-actions a,.claim-btn{background:#062b5c;color:#fff}.share-btn{background:#eef4fb;color:#0b4b94}.report-btn{background:#fff2f2;color:#a22}
+.public-badge{display:inline-block;margin-top:8px;padding:5px 8px;border-radius:99px;background:#eef3f8;color:#5f7187;font-size:10px;font-weight:800}
+.loading{grid-column:1/-1;padding:30px;text-align:center;color:#68788e}
+.filters{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 18px}
+.filters input,.filters select{padding:11px;border:1px solid #d7e0eb;border-radius:10px;background:#fff;min-width:0}
+.owner-list{display:grid;gap:10px;margin-top:15px}.owner-item{border:1px solid #e4eaf2;border-radius:13px;padding:13px}.owner-item button{margin-top:8px;border:0;border-radius:9px;padding:9px 11px;font-weight:800}
+@media(max-width:560px){.filters{grid-template-columns:1fr}.contact-actions>*{flex:1;text-align:center}}
+
 </style>
 <style>
 /* PontoJá v2 — recursos adicionais */
@@ -48,10 +79,34 @@ footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-con
 </head>
 <body>
 <header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-controls="sideMenu" aria-expanded="false">☰</button>
   <a class="logo" href="#top">📍 Ponto<span>Já</span><small>Comece por aqui.</small></a>
   <nav><a href="#top">Início</a><a href="#resultados">Lugares</a><a href="#categorias">Serviços</a><a href="#resultados">Produtos</a><a href="#resultados">Eventos</a><a href="#resultados">Notícias</a></nav>
   <div id="where">📍 Sua região</div><div class="account"><button class="nav-btn" id="loginBtn">Entrar</button><button class="nav-btn" id="ownerBtn">Área do negócio</button></div>
+
 </header>
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="sideMenu" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="logo">📍 Ponto<span>Já</span><small>Comece por aqui.</small></div>
+    <button class="drawer-close" id="menuClose" type="button" aria-label="Fechar menu">×</button>
+  </div>
+  <div class="drawer-user" id="drawerUser">👤 Você ainda não entrou</div>
+  <nav class="drawer-nav" aria-label="Menu principal">
+    <a href="#top" data-menu-action="home">🏠 <span>Início</span></a>
+    <a href="#resultados" data-menu-action="explore">🔎 <span>Explorar</span></a>
+    <button type="button" data-menu-action="favorites">❤️ <span>Favoritos</span></button>
+    <button type="button" data-menu-action="region">📍 <span>Minha região</span></button>
+    <div class="drawer-sep"></div>
+    <button type="button" data-menu-action="add">➕ <span>Cadastrar negócio</span></button>
+    <button type="button" data-menu-action="account">👤 <span>Minha conta</span></button>
+    <button type="button" data-menu-action="owner">🏪 <span>Área do negócio</span></button>
+    <div class="drawer-sep"></div>
+    <button type="button" data-menu-action="plans">⭐ <span>Destaques e planos</span></button>
+  </nav>
+  <div class="drawer-foot">PontoJá · Encontre o que precisa perto de você.</div>
+</aside>
 
 <section class="hero" id="top">
 <div class="hero-inner">
@@ -81,6 +136,7 @@ footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-con
 
 <section class="section" id="resultados">
 <div class="head"><div><h2 id="resultTitle">🔥 Em destaque</h2><p id="resultInfo">Resultados de exemplo — pesquise para encontrar o que procura.</p></div><button class="link" id="clearBtn">Limpar busca</button></div>
+<div class="filters"><input id="cityFilter" placeholder="Filtrar por cidade"><select id="typeFilter"><option value="">Todas as categorias</option><option>Lugar</option><option>Serviço</option><option>Produto</option><option>Evento</option><option>Profissional</option></select></div>
 <div class="results" id="cards"></div>
 </section>
 
@@ -108,13 +164,20 @@ footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-con
 <div class="modal">
 <button class="close" id="closeModal">×</button>
 <h2>Cadastrar negócio</h2>
-<p style="color:#68788e">O cadastro fica salvo neste navegador nesta primeira versão.</p>
+<p style="color:#68788e">O cadastro é enviado ao PontoJá e também aparece neste aparelho.</p>
 <form class="form" id="addForm">
 <input id="businessName" required placeholder="Nome do negócio">
 <select id="businessType" required><option value="">Escolha a categoria</option><option>Lugar</option><option>Serviço</option><option>Produto</option><option>Evento</option><option>Profissional</option></select>
 <input id="businessDesc" required placeholder="Descrição (ex.: pizzaria, eletricista...)">
-<input id="businessCity" placeholder="Cidade">
-<button>Adicionar ao PontoJá</button>
+<input id="businessCity" required placeholder="Cidade">
+<input id="businessAddress" placeholder="Endereço (rua, número, bairro)">
+<input id="businessPhone" type="tel" placeholder="WhatsApp / telefone">
+<input id="businessHours" placeholder="Horário (ex.: Seg–Sex 08:00–18:00)">
+<input id="businessInstagram" placeholder="Instagram (ex.: @pontoja)">
+<input id="businessWebsite" type="url" placeholder="Site (https://...)">
+<label class="photo-input"><strong>📸 Fotos do negócio</strong><br><small>Escolha até 5 fotos (máx. 5 MB cada)</small><input id="businessPhotos" type="file" accept="image/*" multiple style="display:block;margin-top:9px"></label>
+<div class="photo-preview" id="photoPreview"></div>
+<button id="submitBusiness">Adicionar ao PontoJá</button>
 </form>
 </div></div>
 
@@ -128,7 +191,7 @@ footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-con
       <div class="meta" id="detailDesc"></div>
       <div class="detail-grid">
         <div>
-          <div class="info-box"><h4>📸 Fotos</h4><div class="photo-row"><div class="photo">🏪</div><div class="photo">📷</div><div class="photo">✨</div></div></div>
+          <div class="info-box"><h4>📸 Fotos</h4><div class="photo-row" id="detailPhotos"></div></div>
           <div class="info-box" style="margin-top:12px"><h4>⭐ Avaliações</h4><div id="reviews"></div>
             <form class="review-form" id="reviewForm">
               <select id="reviewStars"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select>
@@ -139,7 +202,12 @@ footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-con
         </div>
         <div>
           <div class="info-box"><h4>📍 Localização</h4><div id="mapBox"><span class="pin">📍</span></div><p class="meta" id="detailCity"></p></div>
-          <div class="info-box" style="margin-top:12px"><h4>ℹ️ Informações</h4><p class="meta">Horário: 08:00–22:00</p><p class="meta">Telefone: (00) 00000-0000</p><button class="review-form" style="width:100%" onclick="toast('Em breve: rota e contato online!')">Como chegar</button></div>
+          <div class="info-box" style="margin-top:12px"><h4>ℹ️ Informações</h4>
+<p class="meta" id="detailAddress"></p><p class="meta" id="detailHours"></p>
+<div class="contact-actions" id="detailContacts"></div>
+<span class="public-badge" id="publicBadge" style="display:none">Informações públicas — perfil ainda não reivindicado</span>
+<div class="contact-actions"><button class="claim-btn" id="claimBtn" type="button">🏪 Reivindicar empresa</button><button class="share-btn" id="shareBtn" type="button">↗ Compartilhar</button><button class="report-btn" id="reportBtn" type="button">⚑ Denunciar</button></div>
+</div>
         </div>
       </div>
     </div>
@@ -170,7 +238,7 @@ footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-con
       <div class="stat"><span>Cliques</span><b>347</b><small>+11% este mês</small></div>
       <div class="stat"><span>Avaliação</span><b>4,8 ★</b><small>1.204 avaliações</small></div>
     </div>
-    <h3>Configurações</h3>
+    <h3>Meus negócios</h3><div class="owner-list" id="ownerBusinesses"><p class="meta">Entre na sua conta para gerenciar seus negócios.</p></div><h3>Configurações</h3>
     <div class="switch"><span>Receber mensagens</span><input type="checkbox" checked></div>
     <div class="switch"><span>Mostrar telefone</span><input type="checkbox" checked></div>
     <div class="switch"><span>Participar de ofertas</span><input type="checkbox"></div>
@@ -180,7 +248,13 @@ footer{background:#041f43;color:#dbe7f6;padding:30px 5%;display:flex;justify-con
 
 <div class="toast" id="toast"></div>
 
-<script>
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+const SUPABASE_URL = 'https://senxebdofpczulxsmile.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_80EOBd8sccMKZgKitXdisg_czA1Zk7C';
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
 const base=[
  {id:1,n:"Burger House",type:"Lugar",desc:"Restaurante e hambúrguer",city:"Sua região",icon:"🍔",rating:"4,8",dist:"1,4 km"},
  {id:2,n:"Fit Life Academia",type:"Serviço",desc:"Academia e treinamento",city:"Sua região",icon:"🏋️",rating:"4,7",dist:"2,1 km"},
@@ -192,9 +266,11 @@ const base=[
  {id:8,n:"Festival de Rua",type:"Evento",desc:"Comida, música e artesanato",city:"Sua região",icon:"🎪",rating:"4,5",dist:"4,1 km"}
 ];
 let custom=JSON.parse(localStorage.getItem("pontojá_custom")||"[]");
+let dbItems=[];
 let favorites=JSON.parse(localStorage.getItem("pontojá_favs")||"[]");
-let all=()=>[...custom,...base];
+let all=()=>[...dbItems,...custom,...base];
 const cards=document.getElementById("cards"),q=document.getElementById("q"),cat=document.getElementById("category");
+const cityFilter=document.getElementById("cityFilter"),typeFilter=document.getElementById("typeFilter");
 
 function render(items=all(), searching=false){
  cards.innerHTML="";
@@ -202,7 +278,7 @@ function render(items=all(), searching=false){
  items.forEach(x=>{
   const fav=favorites.includes(x.id);
   const el=document.createElement("article");el.className="card";
-  el.innerHTML=`<div class="pic">${x.icon}</div><div class="body"><span class="tag">${x.type}</span><button class="heart" aria-label="Favoritar" data-fav="${x.id}">${fav?"♥":"♡"}</button><h3>${x.n}</h3><div class="meta">${x.desc}</div><div class="meta">${x.rating?`<span class="rating">★ ${x.rating}</span> · `:""}${x.city}</div><div class="meta">📍 ${x.dist||"—"}</div></div>`;
+  el.innerHTML=`<div class="pic">${x.photos?.[0]?`<img src="${x.photos[0]}" alt="${x.n}">`:x.icon}</div><div class="body"><span class="tag">${x.type}</span><button class="heart" aria-label="Favoritar" data-fav="${x.id}">${fav?"♥":"♡"}</button><h3>${x.n}</h3><div class="meta">${x.desc}</div><div class="meta">${x.rating?`<span class="rating">★ ${x.rating}</span> · `:""}${x.city}</div><div class="meta">📍 ${x.dist||"—"}</div></div>`;
   cards.appendChild(el);
  });
  document.querySelectorAll("[data-fav]").forEach(b=>b.onclick=()=>{
@@ -212,7 +288,8 @@ function render(items=all(), searching=false){
 }
 function currentItems(){
  const term=q.value.trim().toLowerCase(), c=cat.value;
- return all().filter(x=>(!term || [x.n,x.desc,x.type,x.city].join(" ").toLowerCase().includes(term))&&(!c||x.type===c));
+ const city=(cityFilter?.value||"").trim().toLowerCase(), extraType=typeFilter?.value||"";
+ return all().filter(x=>(!term || [x.n,x.desc,x.type,x.city].join(" ").toLowerCase().includes(term))&&(!c||x.type===c)&&(!city||(x.city||"").toLowerCase().includes(city))&&(!extraType||x.type===extraType));
 }
 function search(){
  const items=currentItems();render(items,true);
@@ -224,22 +301,35 @@ document.getElementById("searchForm").onsubmit=e=>{e.preventDefault();search()};
 document.getElementById("clearBtn").onclick=()=>{q.value="";cat.value="";render();document.getElementById("resultTitle").textContent="🔥 Em destaque";document.getElementById("resultInfo").textContent="Resultados de exemplo — pesquise para encontrar o que procura."};
 document.querySelectorAll(".cat").forEach(a=>a.onclick=()=>{cat.value=a.dataset.cat;q.value="";setTimeout(search,0)});
 document.querySelectorAll("[data-search]").forEach(b=>b.onclick=()=>{q.value=b.dataset.search;cat.value="";search()});
+cityFilter.oninput=search;typeFilter.onchange=search;
 
 const overlay=document.getElementById("overlay");
 document.getElementById("openAdd").onclick=()=>overlay.style.display="flex";
 document.getElementById("closeModal").onclick=()=>overlay.style.display="none";
 overlay.onclick=e=>{if(e.target===overlay)overlay.style.display="none"};
 
-document.getElementById("addForm").onsubmit=e=>{
+const photoInput=document.getElementById("businessPhotos");
+photoInput.onchange=()=>{
+ const preview=document.getElementById("photoPreview");
+ preview.innerHTML="";
+ [...photoInput.files].slice(0,5).forEach(file=>{
+   const img=document.createElement("img");
+   img.src=URL.createObjectURL(file);
+   preview.appendChild(img);
+ });
+};
+
+document.getElementById("addForm").onsubmit=async e=>{
  e.preventDefault();
- const salvou = await cadastrarNoSupabase(); 
-  if (!salvou) return;
- const item={id:Date.now(),n:document.getElementById("businessName").value,type:document.getElementById("businessType").value,desc:document.getElementById("businessDesc").value,city:document.getElementById("businessCity").value||"Sua região",icon:"🏪",rating:"Novo",dist:"—"};
- custom.unshift(item);localStorage.setItem("pontojá_custom",JSON.stringify(custom));
- overlay.style.display="none";e.target.reset();q.value=item.n;cat.value="";search();toast("Negócio cadastrado com sucesso!");
+ const salvo = await cadastrarNoSupabase();
+ if (!salvo) return;
+ const item={id:salvo.id||Date.now(),n:document.getElementById("businessName").value,type:document.getElementById("businessType").value,desc:document.getElementById("businessDesc").value,city:document.getElementById("businessCity").value||"Sua região",icon:"🏪",photos:salvo.photos||[],address:document.getElementById("businessAddress").value,phone:document.getElementById("businessPhone").value,hours:document.getElementById("businessHours").value,instagram:document.getElementById("businessInstagram").value,website:document.getElementById("businessWebsite").value,rating:"Novo",dist:"—"};
+ custom.unshift(item);
+ overlay.style.display="none";e.target.reset();document.getElementById("photoPreview").innerHTML="";q.value=item.n;cat.value="";await testarConexao();search();toast("Negócio cadastrado com sucesso!");
 };
 
 function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>t.style.display="none",2600)}
+window.toast=toast;
 
 if(navigator.geolocation){
  navigator.geolocation.getCurrentPosition(()=>document.getElementById("where").textContent="📍 Localização ativada",()=>{},{timeout:3000});
@@ -256,11 +346,22 @@ let selectedId=null;
 
 function openDetail(item){
  selectedId=item.id;
- document.getElementById("detailCover").textContent=item.icon||"🏪";
+ const cover=document.getElementById("detailCover");
+ cover.innerHTML=item.photos?.[0]?`<img src="${item.photos[0]}" alt="${item.n}" style="width:100%;height:100%;object-fit:cover">`:(item.icon||"🏪");
  document.getElementById("detailType").textContent=item.type;
  document.getElementById("detailName").textContent=item.n;
  document.getElementById("detailDesc").textContent=item.desc;
  document.getElementById("detailCity").textContent=`${item.city||"Sua região"} · ${item.dist||"—"}`;
+ const gallery=document.getElementById("detailPhotos");
+ gallery.innerHTML=item.photos?.length?item.photos.map(u=>`<img src="${u}" alt="Foto de ${item.n}" style="width:82px;height:65px;object-fit:cover;border-radius:10px">`).join(""):`<div class="photo">📷</div>`;
+ document.getElementById("detailAddress").textContent=item.address?`📍 ${item.address}`:"📍 Endereço não informado";
+ document.getElementById("detailHours").textContent=item.hours?`🕒 ${item.hours}`:"🕒 Horário não informado";
+ const contacts=document.getElementById("detailContacts");contacts.innerHTML="";
+ if(item.phone){const digits=item.phone.replace(/\D/g,"");contacts.innerHTML+=`<a href="https://wa.me/55${digits}" target="_blank" rel="noopener">WhatsApp</a>`}
+ if(item.instagram){const ig=item.instagram.replace(/^@/,"");contacts.innerHTML+=`<a href="https://instagram.com/${ig}" target="_blank" rel="noopener">Instagram</a>`}
+ if(item.website){contacts.innerHTML+=`<a href="${item.website}" target="_blank" rel="noopener">Site</a>`}
+ document.getElementById("publicBadge").style.display=item.publicInfo?"inline-block":"none";
+ document.getElementById("claimBtn").style.display=item.publicInfo?"inline-block":"none";
  renderReviews(item.id);
  detail.style.display="flex";
 }
@@ -271,7 +372,20 @@ function renderReviews(id){
  box.innerHTML=list.map(r=>`<div class="review"><b>${r.name}</b> <span class="stars">${"★".repeat(r.stars)}${"☆".repeat(5-r.stars)}</span><div class="meta">${r.text}</div></div>`).join("");
 }
 document.getElementById("closeDetail").onclick=()=>detail.style.display="none";
+
 detail.onclick=e=>{if(e.target===detail)detail.style.display="none"};
+document.getElementById("shareBtn").onclick=async()=>{
+ const item=all().find(x=>x.id===selectedId); if(!item)return;
+ const shareData={title:`${item.n} — PontoJá`,text:`Confira ${item.n} no PontoJá`,url:location.href};
+ try{if(navigator.share)await navigator.share(shareData);else toast("Link pronto para compartilhar.");}catch(e){}
+};
+document.getElementById("claimBtn").onclick=()=>{
+ if(!loggedUser){detail.style.display="none";loginOverlay.style.display="flex";toast("Entre para reivindicar este perfil.");return}
+ const item=all().find(x=>x.id===selectedId);toast(`Solicitação de ${item?.n||"empresa"} registrada para análise.`);
+};
+document.getElementById("reportBtn").onclick=()=>{
+ const reason=prompt("Qual o motivo da denúncia?");if(reason?.trim())toast("Denúncia recebida. Obrigado por ajudar o PontoJá.");
+};
 document.getElementById("reviewForm").onsubmit=e=>{
  e.preventDefault();
  if(!loggedUser){detail.style.display="none";loginOverlay.style.display="flex";toast("Entre para publicar uma avaliação.");return}
@@ -308,6 +422,7 @@ document.getElementById("loginForm").onsubmit=e=>{
  localStorage.setItem("pontojá_user",JSON.stringify(loggedUser));
  loginOverlay.style.display="none";
  document.getElementById("loginBtn").textContent=`Olá, ${loggedUser.name.split(" ")[0]}`;
+ updateDrawerUser();
  toast("Conta conectada!");
 };
 document.getElementById("tabLogin").onclick=()=>{
@@ -316,62 +431,186 @@ document.getElementById("tabLogin").onclick=()=>{
 document.getElementById("tabRegister").onclick=()=>{
  document.getElementById("tabRegister").classList.add("active");document.getElementById("tabLogin").classList.remove("active");document.getElementById("loginTitle").textContent="Criar conta no PontoJá";
 };
-document.getElementById("ownerBtn").onclick=()=>ownerPanel.style.display="flex";
+function renderOwnerBusinesses(){
+ const box=document.getElementById("ownerBusinesses");
+ if(!loggedUser){box.innerHTML='<p class="meta">Entre na sua conta para gerenciar seus negócios.</p>';return}
+ const mine=custom;
+ box.innerHTML=mine.length?mine.map(x=>`<div class="owner-item"><b>${x.n}</b><div class="meta">${x.type} · ${x.city}</div><button type="button" data-owner-view="${x.id}">Ver anúncio</button></div>`).join(""):'<p class="meta">Nenhum negócio cadastrado nesta conta ainda.</p>';
+ box.querySelectorAll("[data-owner-view]").forEach(b=>b.onclick=()=>{const x=all().find(v=>String(v.id)===b.dataset.ownerView);if(x){ownerPanel.style.display="none";openDetail(x)}})
+}
+document.getElementById("ownerBtn").onclick=()=>{renderOwnerBusinesses();ownerPanel.style.display="flex"};
 document.getElementById("closeOwner").onclick=()=>ownerPanel.style.display="none";
 ownerPanel.onclick=e=>{if(e.target===ownerPanel)ownerPanel.style.display="none"};
 if(loggedUser)document.getElementById("loginBtn").textContent=`Olá, ${loggedUser.name.split(" ")[0]}`;
 
+
+/* Menu lateral: botão + gesto da borda esquerda */
+const sideMenu=document.getElementById("sideMenu");
+const drawerBackdrop=document.getElementById("drawerBackdrop");
+const menuBtn=document.getElementById("menuBtn");
+const menuClose=document.getElementById("menuClose");
+const drawerUser=document.getElementById("drawerUser");
+
+function updateDrawerUser(){
+ drawerUser.textContent=loggedUser?`👤 Olá, ${loggedUser.name.split(" ")[0]}`:"👤 Você ainda não entrou";
+}
+function openMenu(){
+ sideMenu.classList.add("open");drawerBackdrop.classList.add("open");
+ sideMenu.setAttribute("aria-hidden","false");menuBtn.setAttribute("aria-expanded","true");
+ updateDrawerUser();
+}
+function closeMenu(){
+ sideMenu.classList.remove("open");drawerBackdrop.classList.remove("open");
+ sideMenu.setAttribute("aria-hidden","true");menuBtn.setAttribute("aria-expanded","false");
+}
+menuBtn.addEventListener("click",openMenu);
+menuClose.addEventListener("click",closeMenu);
+drawerBackdrop.addEventListener("click",closeMenu);
+
+document.querySelectorAll("[data-menu-action]").forEach(el=>el.addEventListener("click",()=>{
+ const action=el.dataset.menuAction;
+ closeMenu();
+ if(action==="home") setTimeout(()=>document.getElementById("top").scrollIntoView({behavior:"smooth"}),20);
+ if(action==="explore") setTimeout(()=>document.getElementById("resultados").scrollIntoView({behavior:"smooth"}),20);
+ if(action==="favorites"){
+   const favItems=all().filter(x=>favorites.includes(x.id));
+   render(favItems,true);
+   document.getElementById("resultTitle").textContent="❤️ Favoritos";
+   document.getElementById("resultInfo").textContent=favItems.length?`${favItems.length} favorito${favItems.length===1?"":"s"}.`:"Você ainda não favoritou nenhum negócio.";
+   setTimeout(()=>document.getElementById("resultados").scrollIntoView({behavior:"smooth"}),20);
+ }
+ if(action==="region"){
+   document.getElementById("where").textContent="📍 Sua região";
+   toast("Região pronta para sua busca.");
+ }
+ if(action==="add") overlay.style.display="flex";
+ if(action==="account") loginOverlay.style.display="flex";
+ if(action==="owner"){renderOwnerBusinesses();ownerPanel.style.display="flex";}
+ if(action==="plans") toast("Destaques e planos serão ativados na etapa de pagamentos.");
+}));
+
+let edgeStartX=null,edgeStartY=null,drawerStartX=null,drawerStartY=null;
+document.addEventListener("touchstart",e=>{
+ if(e.touches.length!==1)return;
+ const t=e.touches[0];
+ if(!sideMenu.classList.contains("open") && t.clientX<=28){edgeStartX=t.clientX;edgeStartY=t.clientY}
+ if(sideMenu.classList.contains("open")){drawerStartX=t.clientX;drawerStartY=t.clientY}
+},{passive:true});
+document.addEventListener("touchend",e=>{
+ const t=e.changedTouches[0];
+ if(edgeStartX!==null){
+   const dx=t.clientX-edgeStartX,dy=Math.abs(t.clientY-edgeStartY);
+   if(dx>70 && dy<80)openMenu();
+   edgeStartX=edgeStartY=null;
+ }
+ if(drawerStartX!==null){
+   const dx=t.clientX-drawerStartX,dy=Math.abs(t.clientY-drawerStartY);
+   if(dx<-65 && dy<80)closeMenu();
+   drawerStartX=drawerStartY=null;
+ }
+},{passive:true});
+updateDrawerUser();
+
+
 /* Re-render once so the card detail handlers are active. */
 render();
 
-</script>
-<script type="module">
-  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
-
-  const SUPABASE_URL = 'https://senxebdofpczulxsmile.supabase.co';
-  const SUPABASE_KEY = 'sb_publishable_80EOBd8sccMKZgKitXdisg_czA1Zk7C';
-
-  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-  window.supabaseClient = supabase;
-
-  async function testarConexao() {
-    const { data, error } = await supabase
-      .from('anuncios')
-      .select('*')
-      .limit(10);
-
-    if (error) {
-      alert('ERRO: ' + error.message);
-      return;
-    }
-    
-
-    console.log('PontoJá conectado ao Supabase:', data);
-  }
-async function cadastrarNoSupabase() {
-  const titulo = document.getElementById("businessName").value.trim();
-  const categoria = document.getElementById("businessType").value;
-  const cidade = document.getElementById("businessCity").value.trim();
-  const decricao = document.getElementById("businessDesc").value.trim();
-
-  const { error } = await supabase
-    .from("anuncios")
-    .insert({
-      titulo: titulo,
-      categoria: categoria,
-      cidade: cidade,
-      decricao: decricao
-    });
-
+async function testarConexao() {
+  const { data, error } = await supabase.from("anuncios").select("*").order("id", { ascending: false }).limit(100);
   if (error) {
-    alert("Erro ao cadastrar: " + error.message);
+    console.error("Erro Supabase:", error.message);
     return false;
   }
 
+  dbItems = (data || []).map(x => ({
+    id: Number(x.id),
+    n: x.titulo || "Negócio",
+    type: x.categoria || "Lugar",
+    desc: x.decricao || "",
+    city: x.cidade || "Sua região",
+    icon: "🏪",
+    photos: Array.isArray(x.foto_urls) ? x.foto_urls : [],
+    address:x.endereco||"",phone:x.telefone||"",hours:x.horario||"",instagram:x.instagram||"",website:x.site||"",publicInfo:!!x.informacao_publica,
+    rating: "Novo",
+    dist: "—"
+  }));
+
+  /* Evita mostrar duas vezes no aparelho o que já foi salvo no banco. */
+  const dbKeys = new Set(dbItems.map(x => [x.n,x.type,x.desc,x.city].join("|").toLowerCase()));
+  custom = custom.filter(x => !dbKeys.has([x.n,x.type,x.desc,x.city].join("|").toLowerCase()));
+  localStorage.setItem("pontojá_custom", JSON.stringify(custom));
+  render();
+  console.log("PontoJá conectado ao Supabase:", data);
   return true;
 }
-  testarConexao();
-  
+
+async function cadastrarNoSupabase() {
+  const titulo = document.getElementById("businessName").value.trim();
+  const categoria = document.getElementById("businessType").value;
+  const cidade = document.getElementById("businessCity").value.trim() || "Sua região";
+  const decricao = document.getElementById("businessDesc").value.trim();
+  const endereco=document.getElementById("businessAddress").value.trim();
+  const telefone=document.getElementById("businessPhone").value.trim();
+  const horario=document.getElementById("businessHours").value.trim();
+  const instagram=document.getElementById("businessInstagram").value.trim();
+  const site=document.getElementById("businessWebsite").value.trim();
+  const files = [...document.getElementById("businessPhotos").files].slice(0,5);
+
+  for (const file of files) {
+    if (!file.type.startsWith("image/")) {
+      alert("Escolha apenas arquivos de imagem.");
+      return false;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      alert(`A foto ${file.name} passa de 5 MB.`);
+      return false;
+    }
+  }
+
+  const submit = document.getElementById("submitBusiness");
+  submit.disabled = true;
+  submit.textContent = "Enviando...";
+
+  try {
+    const foto_urls = [];
+
+    for (const file of files) {
+      const ext = (file.name.split(".").pop() || "jpg").toLowerCase();
+      const safeExt = /^[a-z0-9]+$/.test(ext) ? ext : "jpg";
+      const path = `anuncios/${Date.now()}-${crypto.randomUUID()}.${safeExt}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from("fotos")
+        .upload(path, file, { cacheControl: "3600", upsert: false, contentType: file.type });
+
+      if (uploadError) throw uploadError;
+
+      const { data: publicData } = supabase.storage.from("fotos").getPublicUrl(path);
+      foto_urls.push(publicData.publicUrl);
+    }
+
+    const { data, error } = await supabase
+      .from("anuncios")
+      .insert({ titulo, categoria, cidade, decricao, foto_urls, endereco, telefone, horario, instagram, site, informacao_publica:false })
+      .select("id")
+      .single();
+
+    if (error) throw error;
+
+    return { id: data?.id, photos: foto_urls };
+  } catch (err) {
+    console.error(err);
+    alert("Erro ao cadastrar: " + (err?.message || "não foi possível concluir o cadastro."));
+    return false;
+  } finally {
+    submit.disabled = false;
+    submit.textContent = "Adicionar ao PontoJá";
+  }
+}
+
+testarConexao();
+
 </script>
+
 </body>
 </html>
