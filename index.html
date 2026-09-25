@@ -232,6 +232,8 @@ overlay.onclick=e=>{if(e.target===overlay)overlay.style.display="none"};
 
 document.getElementById("addForm").onsubmit=e=>{
  e.preventDefault();
+ const salvou = await cadastrarNoSupabase(); 
+  if (!salvou) return;
  const item={id:Date.now(),n:document.getElementById("businessName").value,type:document.getElementById("businessType").value,desc:document.getElementById("businessDesc").value,city:document.getElementById("businessCity").value||"Sua região",icon:"🏪",rating:"Novo",dist:"—"};
  custom.unshift(item);localStorage.setItem("pontojá_custom",JSON.stringify(custom));
  overlay.style.display="none";e.target.reset();q.value=item.n;cat.value="";search();toast("Negócio cadastrado com sucesso!");
