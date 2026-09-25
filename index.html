@@ -346,7 +346,28 @@ render();
 
     console.log('PontoJá conectado ao Supabase:', data);
   }
+async function cadastrarNoSupabase() {
+  const titulo = document.getElementById("businessName").value.trim();
+  const categoria = document.getElementById("businessType").value;
+  const cidade = document.getElementById("businessCity").value.trim();
+  const decricao = document.getElementById("businessDesc").value.trim();
 
+  const { error } = await supabase
+    .from("anuncios")
+    .insert({
+      titulo: titulo,
+      categoria: categoria,
+      cidade: cidade,
+      decricao: decricao
+    });
+
+  if (error) {
+    alert("Erro ao cadastrar: " + error.message);
+    return false;
+  }
+
+  return true;
+}
   testarConexao();
   
 </script>
